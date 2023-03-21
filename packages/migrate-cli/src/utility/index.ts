@@ -1,0 +1,1 @@
+export { makeSnakeCase } from "./makeSnakeCase";

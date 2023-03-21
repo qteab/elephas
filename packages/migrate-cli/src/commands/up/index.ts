@@ -30,7 +30,7 @@ export class Up extends Command {
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(Up);
 
-    up({
+    await up({
       logger: { log: (message) => this.log(message) },
       migrationsPath: path.join(process.cwd(), "/migrations"),
       connectionUri: flags.connectionString,

@@ -1,7 +1,15 @@
 {
   "name": "@qte/elephas-migrate-cli",
+  "version": "0.0.3",
+  "files": [
+    "./dist",
+    "./templates"
+  ],
   "bin": {
     "migrate": "./bin/run"
+  },
+  "scripts": {
+    "build": "tsc && swc ./src -d dist"
   },
   "oclif": {
     "bin": "migrate",
@@ -16,10 +24,15 @@
   },
   "dependencies": {
     "@oclif/core": "^2.6.4",
-    "@qte/elephas-migrate-core": "workspace:^0.0.2"
+    "@qte/elephas-migrate-core": "workspace:^0.0.3"
   },
   "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.41",
     "@types/node": "^18.15.5",
     "typescript": "^5.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
