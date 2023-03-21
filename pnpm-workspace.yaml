@@ -1,0 +1,3 @@
+packages:
+  - "packages/migrate-cli"
+  - "packages/migrate-core"
