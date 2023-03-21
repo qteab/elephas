@@ -5,7 +5,7 @@ importers:
   packages/migrate-cli:
     specifiers:
       '@oclif/core': ^2.6.4
-      '@qte/elephas-migrate-core': workspace:^0.0.1
+      '@qte/elephas-migrate-core': workspace:^0.0.2
       '@types/node': ^18.15.5
       typescript: ^5.0.2
     dependencies:

@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@oclif/core": "^2.6.4",
-    "@qte/elephas-migrate-core": "workspace:^0.0.1"
+    "@qte/elephas-migrate-core": "workspace:^0.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
