@@ -4,6 +4,8 @@
   "files": [
     "./dist"
   ],
+  "main": "./dist/index",
+  "types": "./dist/index",
   "scripts": {
     "build": "tsc && swc ./src -d dist"
   },
