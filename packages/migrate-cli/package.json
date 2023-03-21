@@ -1,3 +1,25 @@
 {
-  "name": "@qte/elephas-migrate-cli"
+  "name": "@qte/elephas-migrate-cli",
+  "bin": {
+    "migrate": "./bin/run"
+  },
+  "oclif": {
+    "bin": "migrate",
+    "dirname": "qte-shipping-migrate",
+    "commands": "./dist/commands",
+    "topicSeparator": " ",
+    "topics": {
+      "create": {
+        "description": "Create a migration"
+      }
+    }
+  },
+  "dependencies": {
+    "@oclif/core": "^2.6.4",
+    "@qte/elephas-migrate-core": "workspace:^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "typescript": "^5.0.2"
+  }
 }
