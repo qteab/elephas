@@ -1,3 +1,5 @@
 packages:
   - "packages/migrate-cli"
   - "packages/migrate-core"
+  - "packages/nest"
+  - "pacakges/nest-testing"

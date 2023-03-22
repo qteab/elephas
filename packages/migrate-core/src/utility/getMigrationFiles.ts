@@ -9,7 +9,7 @@ export const getMigrationFiles = (migrationsPath: string) => {
   const files = fs.readdirSync(migrationsPath);
 
   return files.map((f) => ({
-    name: path.basename(f),
+    name: path.basename(f, path.extname(f)),
     filePath: path.join(migrationsPath, "/" + f),
   }));
 };

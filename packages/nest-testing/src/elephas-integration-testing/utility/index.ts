@@ -1,0 +1,1 @@
+export { generateTestingDatabaseName } from "./generateTestingDatabaseName";
