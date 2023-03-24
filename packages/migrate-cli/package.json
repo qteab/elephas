@@ -1,6 +1,6 @@
 {
   "name": "@qte/elephas-migrate-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -8,7 +8,8 @@
     "./templates"
   ],
   "bin": {
-    "migrate": "./bin/run"
+    "migrate": "./bin/run",
+    "elephas": "./bin/run"
   },
   "scripts": {
     "build": "tsc && swc ./src -d dist"
@@ -26,7 +27,7 @@
   },
   "dependencies": {
     "@oclif/core": "^2.6.4",
-    "@qte/elephas-migrate-core": "workspace:^0.1.0"
+    "@qte/elephas-migrate-core": "workspace:^0.1.1"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.62",
