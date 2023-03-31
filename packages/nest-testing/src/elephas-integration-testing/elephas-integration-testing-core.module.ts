@@ -58,6 +58,7 @@ export class ElephasIntegrationTestingCoreModule {
                   await up({
                     pool,
                     migrationsPath: syncOptions.migrationsPath,
+                    closePool: false
                   });
                 }
               },

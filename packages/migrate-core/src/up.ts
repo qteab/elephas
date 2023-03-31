@@ -19,6 +19,7 @@ export const up = async (
   options: {
     logger?: Logger;
     migrationsPath: string;
+    closePool?: boolean;
   } & PoolOrConnectionUri
 ) => {
   const migrationFiles = getMigrationFiles(options.migrationsPath);
@@ -61,5 +62,7 @@ export const up = async (
       );
     }
   });
-  await pool.end();
+  if (options.closePool !== false) {
+    await pool.end();
+  }
 };
