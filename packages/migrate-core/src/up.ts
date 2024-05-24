@@ -39,6 +39,7 @@ export const up = async (
         (alreadyRun) => alreadyRun.name === m.name
       ) === -1
   );
+
   if (migrationsToRun.length < 1) {
     await pool.end();
     options.logger && options.logger.log("No migrations to run");

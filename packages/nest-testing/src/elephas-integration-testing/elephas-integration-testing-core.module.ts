@@ -58,9 +58,11 @@ export class ElephasIntegrationTestingCoreModule {
                   await up({
                     pool,
                     migrationsPath: syncOptions.migrationsPath,
-                    closePool: false
+                    closePool: false,
                   });
                 }
+                syncOptions.afterMigrate &&
+                  (await syncOptions.afterMigrate(pool));
               },
               afterClose: async () => {
                 await livePool.query(voidQuery`
