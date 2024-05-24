@@ -40,14 +40,17 @@ export class ElephasCoreModule {
           ...syncOptions.options,
         });
 
+        syncOptions.afterConnect && (await syncOptions.afterConnect(pool));
+
         return pool;
       },
     };
 
     const closerProvider: FactoryProvider = {
       provide: ElephasCloserService,
-      inject: [providerKey],
-      useFactory: (pool: DatabasePool) => new ElephasCloserService(pool),
+      inject: [providerKey, optionsProvider.provide],
+      useFactory: (pool: DatabasePool, syncOptions: ModuleOptions) =>
+        new ElephasCloserService(pool, syncOptions),
     };
 
     return {

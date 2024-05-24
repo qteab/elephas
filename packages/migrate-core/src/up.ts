@@ -19,6 +19,7 @@ export const up = async (
   options: {
     logger?: Logger;
     migrationsPath: string;
+    closePool?: boolean;
   } & PoolOrConnectionUri
 ) => {
   const migrationFiles = getMigrationFiles(options.migrationsPath);
@@ -38,6 +39,7 @@ export const up = async (
         (alreadyRun) => alreadyRun.name === m.name
       ) === -1
   );
+
   if (migrationsToRun.length < 1) {
     await pool.end();
     options.logger && options.logger.log("No migrations to run");
@@ -61,5 +63,7 @@ export const up = async (
       );
     }
   });
-  await pool.end();
+  if (options.closePool !== false) {
+    await pool.end();
+  }
 };
