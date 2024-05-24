@@ -37,6 +37,7 @@ export class ElephasCoreModule {
               },
             },
           ],
+          ...syncOptions.options,
         });
 
         return pool;
