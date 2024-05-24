@@ -53,6 +53,7 @@ export class ElephasIntegrationTestingCoreModule {
             });
             return {
               connectionUri: testingConnectionUri,
+              options: syncOptions.options,
               afterConnect: async (pool) => {
                 if (syncOptions.migrationsPath) {
                   await up({
