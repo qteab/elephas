@@ -1,6 +1,6 @@
 {
   "name": "@qte/elephas-nest",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -20,11 +20,11 @@
     "zod": "^3.21.4"
   },
   "peerDependencies": {
-    "@nestjs/common": "^9.3.11",
-    "@nestjs/core": "^9.3.11",
-    "reflect-metadata": "^0.1.13",
+    "@nestjs/common": "9.X.X || 10.X.X",
+    "@nestjs/core": "9.X.X || 10.X.X",
+    "reflect-metadata": "0.1.X || 0.2.X",
     "rxjs": "^7.8.0",
-    "zod": "^3.21.4"
+    "zod": "3.X.X"
   },
   "dependencies": {
     "slonik": "^33.1.3"
